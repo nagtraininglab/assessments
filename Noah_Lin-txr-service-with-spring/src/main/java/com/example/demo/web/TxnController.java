@@ -29,11 +29,11 @@ public class TxnController {
 			txns.addAll(accountRepositoryTxn.findAll());
 		}
 		
-		if (filter.equals("Day")) {
+		if (filter.equals("Time")) {
 			txns.addAll(accountRepositoryTxn.findAll());
-			txns = (filterTxn(txns, Day));
+			txns = (filterTxn(txns, Time));
 		}	
-		model.addAttribute("day_select", txns); // request scope
+		model.addAttribute("Time_select", txns); // request scope
 		return "statement_time";
 	}
 	//
